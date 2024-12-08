@@ -1,0 +1,24 @@
+Cluster                                 --> mongodb+srv://cururu995:1234@cluster0.vlxky.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+npm init -y                             --> Cria o projeto automaticamente, sem pedir as configurações.
+node start                              --> Tenta executar diretamente um arquivo start.js.
+npm run start                           --> Executa o script "start" definido no package.json. | "start": "nodemon index.js"
+
+npm install nodemon                     --> Reinicia o servidor a cada vez que um arquivo é editado
+npm install express                     --> Biblioteca para criar o servidor e gerenciar rotas
+npm install axios                       --> Cliente HTTP (faz as requisições). Usado no front-end para se comunicar com o back-end. <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+npm install cors                        --> Middleware para permitir requisições de outras origens (CORS)
+npm install mongoose                    --> Biblioteca para conectar e interagir com o MongoDB
+npm install mongoose-unique-validator   --> Plugin para validar campos únicos no banco de dados
+npm install bcrypt                      --> Biblioteca para criptografar senhas
+npm install jsonwebtoken                --> Biblioteca para criar e validar JSON Web Tokens para autenticação
+
+Comando                                 --> npm install nodemon express axios cors mongoose--legacy-peer-deps mongoose-unique-validator--legacy-peer-deps bcrypt--legacy-peer-deps jsonwebtoken--legacy-peer-deps
+
+--save-dev                              --> Prefixo: Dependência que será instalada só no meu computador.
+--legacy-peer-deps                      --> Prefixo: Útil quando há dependências com versões incompatíveis | mongoose, mongoose-unique-validator, bcrypt, jsonwebtoken
+
+package.json                            --> Arquivo principal de configuração de um projeto Node.js. Ele define as dependências do projeto e outras informações importantes.
+package-lock.json                       --> Gerado automaticamente pelo npm quando você instala dependências. Ele detalha exatamente quais versões das dependências foram instaladas, incluindo suas subdependências.
+node_modules                            --> Pasta onde ficam armazenadas as bibliotecas instaladas pelo NPM.
+
