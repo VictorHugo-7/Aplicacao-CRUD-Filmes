@@ -1,21 +1,19 @@
-PORT = 3000                                                    // Define a porta onde o servidor vai escutar as requisições
+PORT = 3000
+const express = require('express')
+const cors = require('cors')
+const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
-const express = require('express')                             // Framework para criar o servidor e gerenciar rotas
-const cors = require('cors')                                   // Middleware para permitir requisições de outras origens (CORS)
-const mongoose = require('mongoose')                           // Biblioteca para conectar e interagir com o MongoDB
-const uniqueValidator = require('mongoose-unique-validator')   // Plugin para validar campos únicos no banco de dados
-const bcrypt = require('bcrypt')                               // Biblioteca para criptografar senhas
-const jwt = require('jsonwebtoken')                            // Biblioteca para criar e validar JSON Web Tokens para autenticação
-
-const app = express()                                          // Cria uma instância do aplicativo Express
-
-app.use(express.json())                                        // Permite o back-end processar dados em formato JSON recebidos em requisições
-app.use(cors())                                                // Habilita o CORS, permitindo acesso ao back-end de outras origens (ex., outro domínio ou porta)
+const app = express()
+app.use(express.json())
+app.use(cors())
 
 
 // Conecta ao MongoDB usando o Mongoose
 async function conectarAoMongoDB() {
-    await mongoose.connect(`mongodb+srv://cururu995:1234@cluster0.vlxky.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);   // String de conexão para o MongoDB
+    await mongoose.connect(`mongodb+srv://cururu995:1234@cluster0.vlxky.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);   
 }
 
 
@@ -31,28 +29,27 @@ const usuarioSchema = mongoose.Schema({
     login: { type: String, required: true, unique: true },
     password: { type: String, required: true }
 });
-usuarioSchema.plugin(uniqueValidator);                      // Aplica um plugin para garantir unicidade do login
+usuarioSchema.plugin(uniqueValidator);                     
 const Usuario = mongoose.model("Usuario", usuarioSchema);
 
 
 // Rota GET /filmes que responde com a lista de todos os filmes no banco de dados
 app.get("/filmes", async (req, res) => {
-    const filmes = await Filme.find();                            // Usa o modelo Filme para buscar todos os registros na coleção de filmes
-    res.json(filmes);                                             // Envia a lista de filmes como uma resposta JSON para o frontend
+    const filmes = await Filme.find();
+    res.json(filmes);
 });
 
 
 // Rota POST /filmes que permite ao frontend adicionar um novo filme ao banco de dados
 app.post("/filmes", async (req, res) => {
-    // Extrai os dados do título e sinopse enviados pelo frontend no corpo da requisição
     const titulo = req.body.titulo;
     const sinopse = req.body.sinopse;
 
-    const filme = new Filme({ titulo: titulo, sinopse: sinopse }); // Cria uma nova instância do modelo Filme com o título e sinopse fornecidos
-    await filme.save();                                            // Salva o novo filme no banco de dados
+    const filme = new Filme({ titulo: titulo, sinopse: sinopse });
+    await filme.save();
 
-    const filmes = await Filme.find();                             // Após salvar, busca novamente todos os filmes no banco de dados para retornar a lista atualizada
-    res.json(filmes);                                              // Envia a lista de filmes como resposta JSON para o frontend, incluindo o novo filme
+    const filmes = await Filme.find();
+    res.json(filmes);
 });
 
 
@@ -62,20 +59,20 @@ app.post('/signup', async (req, res) => {
         const login = req.body.login;
         const password = req.body.password;
         
-        const criptografada = await bcrypt.hash(password, 10);   // Criptografa a senha com bcrypt
+        const criptografada = await bcrypt.hash(password, 10);   
 
-        const usuario = new Usuario({                            // Cria uma nova instância do modelo Usuario
+        const usuario = new Usuario({                            
             login: login,
             password: criptografada
         });
         
-        const respMongo = await usuario.save();                  // Salva o usuário no MongoDB
+        const respMongo = await usuario.save();                  
         console.log(respMongo);
 
-        res.status(201).end();                                   // Responde com status 201 indicando sucesso
+        res.status(201).end();                                  
     } catch (error) {
         console.log(error);
-        res.status(409).end();                                   // Responde com status 409 indicando conflito (usuário já existe)
+        res.status(409).end();                                   
     }
 });
 
@@ -85,32 +82,32 @@ app.post('/login', async (req, res) => {
     const login = req.body.login;
     const password = req.body.password;
 
-    const u = await Usuario.findOne({ login: req.body.login });        // Busca o usuário pelo login
+    const u = await Usuario.findOne({ login: req.body.login });
     if (!u) {
-        return res.status(401).json({ mensagem: "login inválido" });   // Responde com erro se o login não existe
+        return res.status(401).json({ mensagem: "login inválido" });
     }
 
-    const senhaValida = await bcrypt.compare(password, u.password);    // Compara a senha fornecida com a senha armazenada
+    const senhaValida = await bcrypt.compare(password, u.password);
     if (!senhaValida) {
-        return res.status(401).json({ mensagem: "senha inválida" });   // Responde com erro se a senha está incorreta
+        return res.status(401).json({ mensagem: "senha inválida" });
     }
 
-    const token = jwt.sign(                                            // Gera um token JWT válido por 1 hora
+    const token = jwt.sign(
         { login: login }, 
         "chave-secreta", 
         { expiresIn: "1h" }
     );
-    res.status(200).json({ token: token });                            // Responde com o token de autenticação
+    res.status(200).json({ token: token });
 });
 
 
-// Inicia o servidor na porta definida | Função de calback: função que é executada sempre que um evento acontece
+// Inciciar Servidro
 app.listen(PORT, () => {
     try {
-        conectarAoMongoDB();             // Conecta ao MongoDB ao iniciar o servidor
-        console.log("up and running");   // Confirma que o servidor está em execução
+        conectarAoMongoDB();             
+        console.log(`Servidor rodando na porta ${PORT}`);   
     } catch (e) {
-        console.log('Erro', e);          // Exibe erro caso falhe ao conectar ao banco
+        console.log('Erro', e);          
     }
 });
 

@@ -3,6 +3,7 @@ Cluster                                 --> mongodb+srv://cururu995:1234@cluster
 npm init -y                             --> Cria o projeto automaticamente, sem pedir as configurações.
 node start                              --> Tenta executar diretamente um arquivo start.js.
 npm run start                           --> Executa o script "start" definido no package.json. | "start": "nodemon index.js"
+npm install                             --> Instala todas as dependências listadas no arquivo package.json do projeto
 
 npm install nodemon                     --> Reinicia o servidor a cada vez que um arquivo é editado
 npm install express                     --> Biblioteca para criar o servidor e gerenciar rotas
@@ -13,8 +14,6 @@ npm install mongoose-unique-validator   --> Plugin para validar campos únicos n
 npm install bcrypt                      --> Biblioteca para criptografar senhas
 npm install jsonwebtoken                --> Biblioteca para criar e validar JSON Web Tokens para autenticação
 
-Comando                                 --> npm install nodemon express axios cors mongoose--legacy-peer-deps mongoose-unique-validator--legacy-peer-deps bcrypt--legacy-peer-deps jsonwebtoken--legacy-peer-deps
-
 --save-dev                              --> Prefixo: Dependência que será instalada só no meu computador.
 --legacy-peer-deps                      --> Prefixo: Útil quando há dependências com versões incompatíveis | mongoose, mongoose-unique-validator, bcrypt, jsonwebtoken
 
@@ -22,3 +21,9 @@ package.json                            --> Arquivo principal de configuração 
 package-lock.json                       --> Gerado automaticamente pelo npm quando você instala dependências. Ele detalha exatamente quais versões das dependências foram instaladas, incluindo suas subdependências.
 node_modules                            --> Pasta onde ficam armazenadas as bibliotecas instaladas pelo NPM.
 
+Comandos      
+    npm init -y                           
+    npm install nodemon --save-dev  
+    npm install express axios cors 
+    npm install mongoose mongoose-unique-validator bcrypt jsonwebtoken --legacy-peer-deps    
+    npm run start 
