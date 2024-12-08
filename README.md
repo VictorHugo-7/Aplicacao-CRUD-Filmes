@@ -1,5 +1,5 @@
 # Aplicacao-CRUD-Filmes
-Este projeto é uma aplicação simples para gerenciamento de filmes, utilizando operações CRUD (Criar, Ler, Atualizar e Deletar). Ele foi desenvolvido como uma forma de praticar habilidades de programação e explorar conceitos fundamentais de desenvolvimento web e banco de dados.
+> Este projeto é uma aplicação simples para gerenciamento de filmes, utilizando operações CRUD (Criar, Ler, Atualizar e Deletar). Ele foi desenvolvido como uma forma de praticar habilidades de programação e explorar conceitos fundamentais de desenvolvimento web e banco de dados.
 
 ## Funcionalidades
 | Operação         | Descrição                                              |
