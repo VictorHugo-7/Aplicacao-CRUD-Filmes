@@ -19,10 +19,10 @@
 ## Figma
 ![Geral](https://github.com/user-attachments/assets/b4eb6d81-f662-4fc1-9468-89eb9bba6e90)
 
-## Estatística
+## Estatísticas
 ![](https://visitor-badge.laobi.icu/badge?page_id=VictorHugo-7.Aplicacao-CRUD-Filmes)
-
-
+![Tamanho do Repositório](https://img.shields.io/github/repo-size/VictorHugo-7/Aplicacao-CRUD-Filmes)
+![Linguagens](https://img.shields.io/github/languages/top/VictorHugo-7/Aplicacao-CRUD-Filmes)
 
 
 
