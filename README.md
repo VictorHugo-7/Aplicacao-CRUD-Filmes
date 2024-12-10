@@ -16,6 +16,8 @@
 ## Estatística
 ![](https://visitor-badge.laobi.icu/badge?page_id=VictorHugo-7.Aplicacao-CRUD-Filmes)
 
+## Figma
+![Geral](https://github.com/user-attachments/assets/b4eb6d81-f662-4fc1-9468-89eb9bba6e90)
 
 
 
