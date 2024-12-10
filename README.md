@@ -13,13 +13,12 @@
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" width="40"/> |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | HTML                                                                                                       | CSS                                                                                                        | JavaScript                                                                                                   | Bootstrap                                                                                                    | Node JS                                                                                                     | MongoDB                                                                                                      | Figma                                                                                                     |
-## Estatística
-![](https://visitor-badge.laobi.icu/badge?page_id=VictorHugo-7.Aplicacao-CRUD-Filmes)
 
 ## Figma
 ![Geral](https://github.com/user-attachments/assets/b4eb6d81-f662-4fc1-9468-89eb9bba6e90)
 
-
+## Estatística
+![](https://visitor-badge.laobi.icu/badge?page_id=VictorHugo-7.Aplicacao-CRUD-Filmes)
 
 
 
