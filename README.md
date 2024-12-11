@@ -5,10 +5,10 @@
 > Em Desenvolvimento. Este projeto está em progresso, e novas funcionalidades podem ser adicionadas ou ajustadas.
 
 ## Funcionalidades
-- **Criar Filmes**.....: Responsável por adicionar novos filmes ao sistema.
-- **Ler Filmes**.........: Responsável por exibir a lista de filmes cadastrados.
-- **Editar Filmes**...: Permite modificar as informações de filmes existentes.
-- **Deletar Filmes**: Remove filmes que não são mais necessários. 
+- **_Criar Filmes_**.....: Responsável por adicionar novos filmes ao sistema.
+- **_Ler Filmes_**.........: Responsável por exibir a lista de filmes cadastrados.
+- **_Editar Filmes_**...: Permite modificar as informações de filmes existentes.
+- **_Deletar Filmes_**: Remove filmes que não são mais necessários.
 
 ## Tecnologias
 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="40"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" width="40"/> |
